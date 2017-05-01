@@ -25,7 +25,10 @@ public class Playermovement : MonoBehaviour {
 
     bool slowpower = false;
 
-    void Awake()
+
+
+
+        void Awake()
     {
         groundCheck = transform.Find("groundCheck");
     }
