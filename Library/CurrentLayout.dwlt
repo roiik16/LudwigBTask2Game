@@ -131,10 +131,10 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 771
-  m_MinSize: {x: 887, y: 492}
-  m_MaxSize: {x: 16012, y: 14042}
+  m_MinSize: {x: 883, y: 492}
+  m_MaxSize: {x: 16008, y: 14042}
   vertical: 0
-  controlID: 46
+  controlID: 10
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -180,10 +180,10 @@ MonoBehaviour:
     y: 0
     width: 1253
     height: 771
-  m_MinSize: {x: 685, y: 492}
-  m_MaxSize: {x: 12010, y: 14042}
+  m_MinSize: {x: 681, y: 492}
+  m_MaxSize: {x: 12006, y: 14042}
   vertical: 1
-  controlID: 47
+  controlID: 11
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -205,10 +205,10 @@ MonoBehaviour:
     y: 0
     width: 1253
     height: 500
-  m_MinSize: {x: 685, y: 221}
-  m_MaxSize: {x: 12010, y: 4021}
+  m_MinSize: {x: 681, y: 221}
+  m_MaxSize: {x: 12006, y: 4021}
   vertical: 0
-  controlID: 48
+  controlID: 12
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -394,7 +394,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: dcfbffff00000000fa250000
+    m_ExpandedIDs: 64caffff98fbffffdcfbffff00000000f4250000fa2500003e260000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -474,13 +474,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.046281442, y: -0.0930692, z: 0.0043356176, w: -0.9945795}
+    m_Target: {x: -0.044872597, y: -0.07067435, z: 0.0031872764, w: -0.99649006}
     speed: 2
-    m_Value: {x: -0.046281442, y: -0.09306921, z: 0.0043356176, w: -0.99457955}
+    m_Value: {x: -0.04487235, y: -0.070673965, z: 0.003187259, w: -0.9964846}
   m_Size:
-    m_Target: 21.778149
+    m_Target: 69.798965
     speed: 2
-    m_Value: 21.778149
+    m_Value: 69.798965
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -539,13 +539,15 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 204
+    x: 285
     y: 92
-    width: 608
-    height: 576
+    width: 485
+    height: 479
   m_ViewPositions:
-    m_KeySerializationHelper: []
-    m_ValueSerializationHelper: []
+    m_KeySerializationHelper:
+    - {fileID: 1107632396374593882, guid: f0f0422e464fd7f4889481775fc1626a, type: 2}
+    m_ValueSerializationHelper:
+    - {x: 241.00002, y: 279.80005}
   m_PreviewAnimator: {fileID: 0}
   m_AnimatorController: {fileID: 9100000, guid: f0f0422e464fd7f4889481775fc1626a,
     type: 2}
@@ -601,18 +603,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets
+    - Assets/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\User\Desktop\LudwigBTask2Game\LudwigBTask2Game
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: c8240000
-    m_LastClickedID: 9416
+    m_SelectedIDs: 54250000
+    m_LastClickedID: 9556
     m_ExpandedIDs: 00000000c824000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -668,7 +670,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 6671ffff000000005224000054240000
     m_RenameOverlay:
       m_UserAcceptedRename: 0

@@ -9,15 +9,33 @@ public class Obstaclespawn : MonoBehaviour {
 
 	int path;
 	int pathlength = 3;
+
+    public Transform player;
+    Vector3 offset;
     
 	// Use this for initialization
 	void Start () 
 	{
         path = Random.Range(0, spawnpoints.Length);
         StartCoroutine("SpawnTimer");
+        offset = transform.position - player.position;
     }
-	// Update is called once per frame
-	void Spawn ()
+
+    private void FixedUpdate()
+    {
+        Vector3 pos = transform.position;
+        pos = player.position + offset;
+
+        pos.x = transform.position.x;
+
+        pos.y = transform.position.y;
+
+        transform.position = pos;
+    }
+
+
+    // Update is called once per frame
+    void Spawn ()
     {
         for (int i = 0; i < spawnpoints.Length; i++)
         {

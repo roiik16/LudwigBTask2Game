@@ -5,7 +5,8 @@ using UnityEngine;
 public class Playermovement : MonoBehaviour {
 
     //Physics component
-    public Rigidbody rb;
+    Rigidbody rb;
+    MeshRenderer renderer;
 
     //setting player movement speed
     public float forwardForce = 2000f;
@@ -28,6 +29,11 @@ public class Playermovement : MonoBehaviour {
     void Awake()
     {
         groundCheck = transform.Find("groundCheck");
+
+        rb = GetComponent<Rigidbody>();
+        renderer = GetComponent<MeshRenderer>();
+
+        
     }
 
     void FixedUpdate()
@@ -60,9 +66,18 @@ public class Playermovement : MonoBehaviour {
 
 
         //SLOWPOWERUP INITIATE
-        if (slowpower == true)
+        if (slowpower)
         {
             StartCoroutine(Slowpowerup());
+        }
+
+
+        //JUMPPOWERUP INITIATE
+        if (jumpunlocked && Input.GetButton("Jump") )
+        {
+
+            renderer.material.color = Color.red;
+            jumpunlocked = false;
         }
 
     }
@@ -73,6 +88,7 @@ public class Playermovement : MonoBehaviour {
         if (c.tag == "jumpPower")
         {
             jumpunlocked = true;
+            renderer.material.color = Color.green;
         }
 
 
@@ -80,15 +96,15 @@ public class Playermovement : MonoBehaviour {
         if (c.tag == "slowPower")
         {
             slowpower = true;
+            renderer.material.color = Color.black;
         }
-        
     }
-
 
      IEnumerator Slowpowerup()
     {        
         forwardForce = 200f;
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(4);
+        renderer.material.color = Color.red;
         forwardForce = 2000f;
     }
 }
