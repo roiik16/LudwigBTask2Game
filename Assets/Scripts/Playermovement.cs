@@ -42,7 +42,19 @@ public class Playermovement : MonoBehaviour {
 
         rb.AddForce(0, 0, forwardForce * Time.deltaTime);
 
+        float h = Input.GetAxisRaw("Horizontal");
+        rb.velocity = new Vector3(h * 15f, rb.velocity.y, rb.velocity.z);
+        //rb.AddForce(h * sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
 
+        Vector3 pos = rb.position;
+        if (Mathf.Abs (pos.x) > 7f)
+        {
+            pos.x = Mathf.Sign(pos.x) * 7f;
+        }
+        rb.position = pos;
+
+
+        /*
         //PLAYER CONTROLS
         if (Input.GetKey("d"))
         {
@@ -53,6 +65,7 @@ public class Playermovement : MonoBehaviour {
         {
             rb.AddForce(-sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
+        */
 
         if (rb.position.y < -1f)
         {

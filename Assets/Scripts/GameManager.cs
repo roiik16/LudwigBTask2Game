@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
+    public static int highestScore;
+
     bool gameHasEnded = false;
 
     public float restartDelay = 2f;
