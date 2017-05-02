@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
-    public static int highestScore;
+    //public static int highestScore;
 
     bool gameHasEnded = false;
 
@@ -23,7 +23,6 @@ public class GameManager : MonoBehaviour {
 	// Update is called once per frame
 	public void EndGame ()
     {
-
         if (gameHasEnded == false)
         {
             gameHasEnded = true;
@@ -34,6 +33,6 @@ public class GameManager : MonoBehaviour {
 
     void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
