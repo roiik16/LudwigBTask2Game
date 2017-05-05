@@ -10,6 +10,9 @@ public class Obstaclespawn : MonoBehaviour {
     public GameObject powerup1;
     public GameObject powerup2;
 
+    public float currentTimer = 2f;
+    public float lowerLimitTimer = 0.5f;
+
 	int path;
 	int pathlength = 3;
     int powerupinterval = 6;
@@ -38,7 +41,6 @@ public class Obstaclespawn : MonoBehaviour {
 
         transform.position = pos;
     }
-
 
     // Update is called once per frame
     void Spawn ()
@@ -85,7 +87,13 @@ public class Obstaclespawn : MonoBehaviour {
         while (true)
         {
             Spawn();
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(currentTimer);
+
+            currentTimer -= 0.1f;
+            if (currentTimer < lowerLimitTimer)
+            {
+                currentTimer = lowerLimitTimer;
+            }
         }
     }
  }

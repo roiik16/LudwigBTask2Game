@@ -97,7 +97,7 @@ public class Playermovement : MonoBehaviour {
     {        
         forwardForce = 200f;
         yield return new WaitForSeconds(4);
-
+        forwardForce = 500f;
         renderer.material.color = Color.red;
         
     }
